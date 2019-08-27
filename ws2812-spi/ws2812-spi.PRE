@@ -1,0 +1,19 @@
+
+.CHIP	PMS271
+//{{PADAUK_CODE_OPTION
+	.Code_Option	Under_20mS_VDD_Ok	No
+	.Code_Option	FPPA		2-FPPA
+	.Code_Option	LVR		3.1V
+	.Code_Option	Security	Disable		// Security Disable
+//}}PADAUK_CODE_OPTION
+
+//	----------- IMPORTANT -------------
+//	Please don't change the follow code
+//	It only be used for internal Mini-C
+//	-----------------------------------
+
+	.JMP	FPPA0	<?>, 0
+	.JMP	FPPA1	<?>, 1
+.ROMADR	0x10
+	.PUT	Interrupt <reti>, 8
+
