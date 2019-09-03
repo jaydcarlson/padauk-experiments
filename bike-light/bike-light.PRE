@@ -1,0 +1,18 @@
+
+.CHIP	PMS150C
+//{{PADAUK_CODE_OPTION
+	.Code_Option	Bootup_Time	Slow
+	.Code_Option	LVR		2.0V
+	.Code_Option	Security	Disable		// Security Disable
+	.Code_Option	Drive		Normal
+//}}PADAUK_CODE_OPTION
+
+//	----------- IMPORTANT -------------
+//	Please don't change the follow code
+//	It only be used for internal Mini-C
+//	-----------------------------------
+
+	.JMP	FPPA0	<?>, 0
+.ROMADR	0x10
+	.PUT	Interrupt <reti>, 8
+
