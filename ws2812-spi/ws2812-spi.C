@@ -16,7 +16,7 @@ BYTE spiTemp;
 void	FPPA0 (void)
 {
 	// we're running the CPU a bit hot --- 18 MHz --- but otherwise the timing doesn't work out.
-	.ADJUST_IC	SYSCLK=IHRC/2, IHRC=18MHz, VDD=5V, Bandgap=On;
+	.ADJUST_IC	SYSCLK=IHRC/2, IHRC=18MHz, VDD=5V;
 	fppen	=	0xFF; // enable the other FPPAs (only two total in our case)
 	DISGINT; // disable global interrupt
 	LEDC = 1; // set pin to output
@@ -30,8 +30,8 @@ void	FPPA0 (void)
 		spiTemp = SPI_Data_In;
 		dataReady = 0;
 
-		.FOR bitno, <7,6,5,4,3,2,1,0>
-			if (spiTemp.bitno == 0) {
+		.FOR bit, <7,6,5,4,3,2,1,0>
+			if (spiTemp.bit == 0) {
 				SET1 LED;
 				SET0 LED;
 				.DELAY 2;
@@ -49,7 +49,7 @@ void	Interrupt (void)
 {
 	pushaf;
 
-	if (Intrq.T16)
+	if (Intrq.T16) {
 		Intrq.T16	=	0;
 	}
 	popaf;

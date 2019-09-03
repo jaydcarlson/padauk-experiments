@@ -1,5 +1,5 @@
 
-.CHIP	PMS271
+.CHIP	PMC251
 //{{PADAUK_CODE_OPTION
 	.Code_Option	Under_20mS_VDD_Ok	No
 	.Code_Option	FPPA		2-FPPA

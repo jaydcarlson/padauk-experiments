@@ -1,13 +1,13 @@
 [INI]
 PROJECT=PRE_FILE
 [LINKS]
-~testDualFPPA.C
 ~FPPA_1.C
+~ws2812-spi.C
 [HEAD]
 ~extern.h
 [DEPEND]
-~$:INC_PDK\PMS271.INC
-~testDualFPPA.PRE
+~$:INC_PDK\PMC251.INC
+~ws2812-spi.PRE
 [Ram_Break]
 Break1=No 0000
 Break2=No 0000
@@ -26,5 +26,5 @@ Break8=Au 0000 00FF
 Mark=41 1
 ICE=0 6 2 1388
 [PRE]
-~testDualFPPA.PRJ
-~testDualFPPA.PRE
+~ws2812-spi.PRJ
+~ws2812-spi.PRE
