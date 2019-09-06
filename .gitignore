@@ -54,3 +54,5 @@ dkms.conf
 .idea/
 obj/
 *.tmp
+
+.vscode/
