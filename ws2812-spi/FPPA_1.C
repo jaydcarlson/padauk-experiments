@@ -6,7 +6,7 @@ BYTE	cnt;
 BIT SPI_In			:	PA.6;
 BIT SPI_InMode		:	PAC.6;
 BIT SPI_Clk			:	PA.7;
-BIT SPI_ClkMode		:	PAC.4;
+BIT SPI_ClkMode		:	PAC.7;
 
 
 // This FPPA is responsible for receiving SPI bytes and alerting FFPPA0 whenever a new byte is received.
