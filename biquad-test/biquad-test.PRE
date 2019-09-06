@@ -1,10 +1,18 @@
 
-.CHIP	PMS150C
+.CHIP	PMS134
 //{{PADAUK_CODE_OPTION
 	.Code_Option	Bootup_Time	Slow
-	.Code_Option	Drive		Normal
-	.Code_Option	LVR		3.0V
 	.Code_Option	Security	Disable		// Security Disable
+	.Code_Option	LCD2		Disable
+	.Code_Option	Comparator_Edge	All_Edge
+	.Code_Option	GPC_PWM		Disable
+	.Code_Option	PWM_Source	16MHz
+	.Code_Option	TMx_Bit		6BIT
+	.Code_Option	TMx_Source	16MHz
+	.Code_Option	Interrupt_Src1	PB.0
+	.Code_Option	Interrupt_Src0	PA.0
+	.Code_Option	PB4_PB7_Drive	Strong
+	.Code_Option	LVR		3.5V
 //}}PADAUK_CODE_OPTION
 
 //	----------- IMPORTANT -------------
